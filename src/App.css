@@ -30,5 +30,23 @@ ul,ol{
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  clear: right;
+  
 }
 
+li{
+  display: grid;
+  align-items: center;
+}
+
+.input{
+  display: grid;
+  float: left;
+  width:10%;
+  align-self:flex-start;
+}
+
+.side-bar{
+  float: right;
+  width: 20%;
+}

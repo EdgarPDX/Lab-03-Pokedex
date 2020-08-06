@@ -23,12 +23,16 @@ export default class App extends Component {
     return (
       <>
         <Header />
-          <div>
-          <input onChange ={this.handleChange} >
+          <div className="input">
+            <input placeholder="Pokemon Name" onChange ={this.handleChange} >
           </input>
-          <button onClick = {this.componentDidMount}>CATCH THEM POKEMON</button>
-              <PokemonList pokemon={this.state.pokeState} />
+          <button onClick = {this.componentDidMount}>Who's that Pokemon</button>
           </div>
+        <PokemonList pokemon={this.state.pokeState} />
+        <div className="side-bar">
+
+        </div>
+          
       </>
     )
   }
