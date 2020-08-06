@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header.js'
 import request from 'superagent';
 import PokemonList from './PokemonList';
+import SearchInput from './SearchInput';
 
 export default class App extends Component {
   state = {
@@ -23,11 +24,7 @@ export default class App extends Component {
     return (
       <>
         <Header />
-          <div className="input">
-            <input placeholder="Pokemon Name" onChange ={this.handleChange} >
-          </input>
-          <button onClick = {this.componentDidMount}>Who's that Pokemon</button>
-          </div>
+         <SearchInput componentDidMount={this.componentDidMount} handleChange= {this.handleChange} />
         <PokemonList pokemon={this.state.pokeState} />
         <div className="side-bar">
 
