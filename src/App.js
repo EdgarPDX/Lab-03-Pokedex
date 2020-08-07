@@ -1,38 +1,44 @@
 import React, { Component } from 'react'
 import './App.css';
+import { 
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+} from 'react-router-dom'
+import SearchPage from './SearchPage/SearchPage.js';
+import DetailPage from './DetailPage/DetailPage.js';
 import Header from './Header.js'
-import request from 'superagent';
-import PokemonList from './PokemonList';
-import SearchInput from './SearchInput';
 
 export default class App extends Component {
-  state = {
-    search: '',
-    pokeState:[]
-  }
-  handleChange = (e) => {
-    const value = e.target.value
-    this.setState({search:value})
-  }
-
-  componentDidMount = async () =>{
-    const pokemonData = await request.get(`https://alchemy-pokedex.herokuapp.com/api/pokedex?page=1&perPage=1000&pokemon=${this.state.search}`)
-    this.setState({pokeState: pokemonData.body.results})
-    console.log(pokemonData.body)
-  }
   render() {
     return (
-      <>
-        <Header />
-         <SearchInput componentDidMount={this.componentDidMount} handleChange= {this.handleChange} />
-        <PokemonList pokemon={this.state.pokeState} />
-        <div className="side-bar">
-
+        <div >
+            <Router>
+              <Header />
+              <span className="nav">
+                <Link to="/detail">Detail</Link>
+              </span>
+              <span className="nav">
+                <Link to="/">Home</Link>
+              </span>
+                <Switch>
+                    <Route 
+                        path="/" 
+                        exact
+                        render={(routerProps) => <SearchPage {...routerProps} />} 
+                    />
+                    
+                    <Route 
+                      path="/detail/:myPokemonId" 
+                      exact
+                      render={(routerProps) => <DetailPage {...routerProps} />} 
+                    />
+                </Switch>
+            </Router>
         </div>
-          
-      </>
     )
-  }
+}
 }
 
 

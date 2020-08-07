@@ -41,13 +41,19 @@ li{
 }
 
 .input{
-  display: grid;
-  float: left;
-  width:10%;
+  display: flex;
+  padding-left: 5%;
+  width:auto;
   align-self:flex-start;
 }
 
 .side-bar{
   float: right;
   width: 20%;
+}
+
+.nav{
+  display: flex;
+  padding-right: 5%;
+  clear: right;
 }

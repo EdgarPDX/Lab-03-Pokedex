@@ -1,0 +1,43 @@
+.App {
+    text-align: center;
+  }
+  
+  
+  
+  header {
+    background-color: #282c34;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .pokeball-img{
+    width: 60px;
+    height:60px;
+    border: 2px solid rgb(236, 215, 27);
+    border-radius: 30px;
+  }
+  
+  .pokemon{
+    width: 200px;
+    height: 200px;
+  }
+  
+  ul,ol{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    clear: left;
+    justify-content: center;
+    
+  }
+  
+
+  .nav{
+    display: inline-block;
+    padding-right: 5%;
+    clear: right;
+  }
