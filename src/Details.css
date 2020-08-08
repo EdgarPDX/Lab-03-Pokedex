@@ -25,11 +25,13 @@
   .pokemon-detail{
     
     filter: saturate(130%) contrast(110%) drop-shadow(12px 10px 8px);
-    transition: transform .15s;
+    
   
   }
+ 
   
-  .pokemon-detail:hover {
+  .pokemon-detail:hover{
+    z-index: 1;
     transform: scale(1.5);
     color: lightgray;
     filter: saturate(120%) contrast(120%) drop-shadow(12px 10px 8px);
@@ -66,3 +68,11 @@
     padding-right: 5%;
     clear: right;
   }
+
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}

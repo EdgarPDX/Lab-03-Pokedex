@@ -20,16 +20,21 @@ header {
   height:60px;
 }
 
+
 .pokemon{
+  
   width: 200px;
   height: 200px;
   filter: saturate(130%) contrast(110%) drop-shadow(12px 10px 8px);
   transition: transform .15s;
+  
 
 }
 
 .pokemon:hover {
-  transform: scale(1.5);
+  position: relative;
+  transform: scale(2);
+  z-index: 1;
   color: lightgray;
   filter: saturate(120%) contrast(120%) drop-shadow(12px 10px 8px);
 }
