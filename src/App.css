@@ -10,34 +10,55 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color:rgb(236, 215, 27);
+  filter: saturate(130%) contrast(110%) drop-shadow(12px 10px 8px);
+
 }
 
 .pokeball-img{
   width: 60px;
   height:60px;
-  border: 2px solid rgb(236, 215, 27);
-  border-radius: 30px;
 }
 
+
 .pokemon{
+  
   width: 200px;
   height: 200px;
+  filter: saturate(130%) contrast(110%) drop-shadow(12px 10px 8px);
+  transition: transform .15s;
+  
+
+}
+
+.pokemon:hover {
+  position: relative;
+  transform: scale(2);
+  z-index: 1;
+  color: lightgray;
+  filter: saturate(120%) contrast(120%) drop-shadow(12px 10px 8px);
+}
+a {
+  color: black;
+  
 }
 
 ul,ol{
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  float: right;
   clear: left;
-  justify-content: center;
-  
+  align-content: center;
+  text-align: center;
 }
 
 li{
   display: grid;
-  align-items: center;
+  text-transform: capitalize;
+  border: 2px black solid;
+  justify-content: space-between;
+  margin: 3px;
 }
 
 .input{
@@ -56,4 +77,8 @@ li{
   display: flex;
   padding-right: 5%;
   clear: right;
+}
+
+button{
+  margin-left: 2px;
 }

@@ -18,8 +18,15 @@ export default class DetailPage extends Component {
             <div>
                 {  pokemon
                     ?<div className="poke-container">
-                    <p>{pokemon.pokemon}</p>
-                    <img src={pokemon.url_image} alt={pokemon.pokemon}/>
+                        <div className="poke-stats"><p className="name">{pokemon.pokemon}</p>
+                        <p>Attack: {pokemon.attack}</p>
+                        <p>Defense: {pokemon.defense}</p>
+                        </div> 
+                        <div>
+                            <img className="pokemon-detail"src={pokemon.url_image} alt={pokemon.pokemon}/>
+                        </div>
+                    
+                    
 
                     </div> 
                     : <h1>Loading</h1>
